@@ -7,6 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use("/uploads", express.static("uploads"));
 app.use("/api/students", studentRoutes);
 
 const PORT = process.env.PORT || 5000;
